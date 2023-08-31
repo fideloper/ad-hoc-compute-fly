@@ -39,7 +39,7 @@ class AdHocComputeCommand extends Command
         foreach ($instructions['steps'] as $step) {
             if ($this->isAnAction($step)) {
                 // Clone repo and run script within it
-                $this->downloadAndRunAction($step);
+                $this->cloneAndRunAction($step);
             } else {
                 // Run action directly
                 $this->runAction($step);
